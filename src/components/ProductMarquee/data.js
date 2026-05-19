@@ -1,0 +1,2 @@
+export const MARQUEE_SPEED_MULTIPLIER = 5;
+export const MARQUEE_HOVER_SCALE = 1.05;
