@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Minus, Plus, Trash2, ShoppingBag, ArrowRight } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
@@ -66,12 +67,13 @@ export default function CartDrawer() {
                     <p className="text-slate-900 font-light text-xl tracking-tight">Your collection is empty.</p>
                     <p className="text-slate-400 text-sm font-light max-w-[200px] mx-auto">Discover our signature formulations to start your journey.</p>
                   </div>
-                  <button
+                  <Link
+                    href="/shop"
                     onClick={() => setIsOpen(false)}
-                    className="px-10 py-4 bg-luxury-dark text-white text-[10px] uppercase tracking-widest font-bold rounded-full hover:bg-accent-brand transition-all"
+                    className="px-10 py-4 bg-luxury-dark text-white text-[10px] uppercase tracking-widest font-bold rounded-full hover:bg-accent-brand transition-all inline-block text-center"
                   >
                     Explore Shop
-                  </button>
+                  </Link>
                 </div>
               ) : (
                 cart.map((item) => (
