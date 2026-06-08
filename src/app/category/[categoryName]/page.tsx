@@ -16,6 +16,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// 1. We added this function to define which categories to build statically
+export async function generateStaticParams() {
+  // Replace these with your exact category names (use URL-friendly names)
+  const categories = ['cleansers', 'serums', 'moisturizers', 'masks', 'all'];
+
+  return categories.map((name) => ({
+    categoryName: name,
+  }));
+}
+
 export default function Page() {
   return <CategoryClient />;
 }

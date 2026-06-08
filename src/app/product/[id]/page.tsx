@@ -22,6 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// We added this function to automatically generate paths for all products
+export async function generateStaticParams() {
+  return PRODUCTS.map((product) => ({
+    id: product.id.toString(), // Ensuring the ID is a string
+  }));
+}
+
 export default function Page() {
   return <ProductClient />;
 }
