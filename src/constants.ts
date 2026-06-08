@@ -6,7 +6,7 @@ export const PRODUCTS: Product[] = [
     name: 'Luminous Silk Serum',
     price: 125.00,
     description: 'A revolutionary bio-active serum that restores cellular vitality and radiance.',
-    image: '/assets/luminous-silk-serum.png',
+    image: '/assets/p1.jpeg',
     details: 'Formulated with 2% Pure Hyaluronic Acid and Swiss Alpine Rose extracts. This serum penetrates deep into the dermis to provide 72-hour hydration and visible lifting effects.',
     category: 'Skincare'
   },
@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
     name: 'Velvet Matte Elixir',
     price: 48.00,
     description: 'High-pigment liquid lip color with a weightless, air-whipped texture.',
-    image: '/assets/velvet-matte-elixir.png',
+    image: '/assets/p2.jpeg',
     details: 'Enriched with cold-pressed Jojoba oil and Vitamin E. Provides a rich, saturated color that stays comfortable and smudge-proof for up to 16 hours. Paraben-free and vegan.',
     category: 'Makeup'
   },
@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ethereal Glow Foundation',
     price: 85.00,
     description: 'A serum-infused foundation that blurs the line between skincare and makeup.',
-    image: '/assets/ethereal-glow-foundation.png',
+    image: '/assets/p3.jpeg',
     details: 'Breathable, medium-buildable coverage with SPF 30 protection. Features light-diffusing technology to create a soft-focus effect that lasts from dawn to dusk.',
     category: 'Makeup'
   },
@@ -33,7 +33,7 @@ export const PRODUCTS: Product[] = [
     name: 'Midnight Recovery Mask',
     price: 95.00,
     description: 'An overnight transformation treatment that repairs environmental damage.',
-    image: '/assets/midnight-recovery-mask.png',
+    image: '/assets/p4.jpeg',
     details: 'Powered by rare Night-Blooming Jasmine and Peptides. This rich mask strengthens the skin barrier while you sleep, ensuring you wake up to a revitalized, smooth complexion.',
     category: 'Skincare'
   },
@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
     name: 'Aurora Eye Palette',
     price: 72.00,
     description: '12 celestial shades inspired by the Northern Lights.',
-    image: '/assets/aurora-eye-palette.png',
+    image: '/assets/p5.jpeg',
     details: 'Cream-to-powder formula with ultra-fine shimmer and velvet mattes. Each shade is highly blendable and infused with crushed gemstones for a truly luminous finish.',
     category: 'Makeup'
   },
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     name: 'Botanical Cleansing Balm',
     price: 65.00,
     description: 'A melt-away balm that dissolves makeup and impurities while nourishing the skin.',
-    image: '/assets/botanical-cleansing-balm.png',
+    image: '/assets/p1.jpeg',
     details: 'Transforms from a balm to a milk. Contains Moringa Seed oil and Rosehip to gently cleanse without stripping natural oils. Leaves skin feeling supple and refreshed.',
     category: 'Skincare'
   },
@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     name: 'Divine Body Oil',
     price: 55.00,
     description: 'A silken body oil that nourishes and glows.',
-    image: '/assets/divine-body-oil.png',
+    image: '/assets/p2.jpeg',
     details: 'Infused with 24k gold flakes and rare almond extracts.',
     category: 'Body Care'
   },
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     name: 'Noir Essence Parfum',
     price: 185.00,
     description: 'A deep, mysterious fragrance for the night.',
-    image: '/assets/noir-essence-parfum.png',
+    image: '/assets/p3.jpeg',
     details: 'Notes of Oud, Bulgarian Rose, and Madagascan Vanilla.',
     category: 'Fragrance'
   },
@@ -78,7 +78,7 @@ export const PRODUCTS: Product[] = [
     name: 'Silk Protein Shampoo',
     price: 42.00,
     description: 'Strengthens and revitalizes hair from root to tip.',
-    image: '/assets/silk-protein-shampoo.png',
+    image: '/assets/p4.jpeg',
     details: 'Formulated with hydrolyzed silk and keratin.',
     category: 'Hair Care'
   },
@@ -87,7 +87,7 @@ export const PRODUCTS: Product[] = [
     name: 'Luxury Spa Gift Set',
     price: 250.00,
     description: 'The ultimate pampering experience in a box.',
-    image: '/assets/luxury-spa-gift-set.png',
+    image: '/assets/p5.jpeg',
     details: 'Contains our best-sellers in full size.',
     category: 'Gift Sets'
   }

@@ -55,14 +55,18 @@ export default function ProductClient() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative group"
           >
-            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl relative bg-white">
+            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl relative bg-white group/img">
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center p-4">
+                <span className="text-xs uppercase tracking-[0.3em] text-white font-medium bg-black/50 border border-white/20 px-6 py-3 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-105">
+                  Coming Soon
+                </span>
+              </div>
             </div>
             
             {/* Floating Product Badge */}
@@ -185,13 +189,18 @@ export default function ProductClient() {
                 whileHover={{ y: -10 }}
                 className="space-y-6"
               >
-                <Link href={`/product/${p.id}`} className="block aspect-[4/5] rounded-[3rem] overflow-hidden border border-slate-100 shadow-xl group bg-white">
+                <Link href={`/product/${p.id}`} className="block aspect-[4/5] rounded-[3rem] overflow-hidden border border-slate-100 shadow-xl group bg-white relative">
                   <img
                     src={p.image}
                     alt={p.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                    <span className="text-[9px] uppercase tracking-[0.25em] text-white font-medium bg-black/40 border border-white/10 px-3 py-1.5 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:scale-105">
+                      Coming Soon
+                    </span>
+                  </div>
                 </Link>
                 <div className="flex justify-between items-start px-4">
                   <div>

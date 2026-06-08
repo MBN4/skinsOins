@@ -100,11 +100,18 @@ export default function HomeClient() {
                 className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-full lg:h-full lg:max-w-lg aspect-square"
               >
                 <div className="absolute inset-0 bg-accent-brand/10 blur-[100px] rounded-full" />
-                <img
-                  src={HERO_SLIDES[index].image}
-                  alt="Hero Product"
-                  className="w-full h-full object-contain relative z-10 drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
-                />
+                <div className="relative w-full h-full rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl group/hero bg-white">
+                  <img
+                    src={HERO_SLIDES[index].image}
+                    alt="Hero Product"
+                    className="w-full h-full object-cover relative z-10 transition-transform duration-[2s] group-hover/hero:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] z-20 flex flex-col items-center justify-center p-4">
+                    <span className="text-xs uppercase tracking-[0.3em] text-white font-medium bg-black/50 border border-white/20 px-6 py-3 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-105">
+                      Coming Soon
+                    </span>
+                  </div>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -157,12 +164,17 @@ export default function HomeClient() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-full md:w-1/2 relative group"
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-[4rem] bg-white border border-slate-100 relative z-10 shadow-2xl">
+              <div className="aspect-[4/5] overflow-hidden rounded-[4rem] bg-white border border-slate-100 relative z-10 shadow-2xl group/img">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                  <span className="text-xs uppercase tracking-[0.3em] text-white font-medium bg-black/50 border border-white/20 px-6 py-3 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-105">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
               <div className="absolute -bottom-8 -right-8 bg-luxury-dark text-white p-10 rounded-full shadow-2xl z-20 cursor-pointer border-[8px] border-white hover:bg-accent-brand transition-colors">
                 <ShoppingBag size={28} />
@@ -214,12 +226,17 @@ export default function HomeClient() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-[4rem] overflow-hidden border border-slate-100 shadow-2xl">
+            <div className="aspect-[4/5] rounded-[4rem] overflow-hidden border border-slate-100 shadow-2xl relative group/img bg-white">
               <img
-                src="/assets/routine.png"
+                src="/assets/p1.jpeg"
                 alt="Routine"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-[2s] group-hover/img:scale-105"
               />
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center p-4">
+                <span className="text-xs uppercase tracking-[0.3em] text-white font-medium bg-black/50 border border-white/20 px-6 py-3 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-105">
+                  Coming Soon
+                </span>
+              </div>
             </div>
           </motion.div>
 

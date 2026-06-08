@@ -29,13 +29,17 @@ export default function ProductMarquee({ products }: ProductMarqueeProps) {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="relative w-[350px] aspect-[4/5] rounded-[3rem] overflow-hidden bg-white border border-slate-100 group shadow-xl shrink-0"
           >
-            <Link href={`/product/${product.id}`} className="block h-full w-full">
+            <Link href={`/product/${product.id}`} className="block h-full w-full relative group/marquee-item">
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-white font-medium bg-black/40 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 group-hover/marquee-item:scale-105">
+                  Coming Soon
+                </span>
+              </div>
             </Link>
             
             <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">

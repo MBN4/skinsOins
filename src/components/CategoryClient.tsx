@@ -45,7 +45,14 @@ export default function CategoryClient() {
                     style={{ width: `${70 + i * 20}%`, height: `${70 + i * 20}%` }}
                   />
                 ))}
-                <img src={product.image} alt={product.name} className="w-64 h-64 object-cover rounded-full shadow-2xl border border-slate-100 bg-white" />
+                <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border border-slate-100 bg-white group/category-img">
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-[2s] group-hover/category-img:scale-110" />
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center p-4">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-white font-medium bg-black/40 border border-white/10 px-3 py-1.5 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 group-hover/category-img:scale-105">
+                      Coming Soon
+                    </span>
+                  </div>
+                </div>
                 <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 -right-4 bg-sky-500 p-4 rounded-full">
                   <Sparkles size={20} />
                 </motion.div>

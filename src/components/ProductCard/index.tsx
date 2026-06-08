@@ -58,7 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         }}
         className="relative aspect-[4/5] overflow-hidden rounded-2xl glass-card group/card"
       >
-        <Link href={`/product/${product.id}`} className="block h-full w-full">
+        <Link href={`/product/${product.id}`} className="block h-full w-full relative">
           <motion.img
             src={product.image}
             alt={product.name}
@@ -66,7 +66,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             style={{ z: 50 }}
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-slate-900/0 group-hover/card:bg-slate-900/5 transition-colors duration-300" />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-white font-medium bg-black/40 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md shadow-2xl transition-all duration-500 group-hover/card:scale-105">
+              Coming Soon
+            </span>
+          </div>
         </Link>
         
         <button
