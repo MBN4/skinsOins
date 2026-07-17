@@ -4,7 +4,6 @@ import { ShopProvider } from '../context/ShopContext';
 import Navbar from '../components/Navbar';
 import CartDrawer from '../components/CartDrawer';
 import Link from 'next/link';
-import ComingSoonOverlay from '../components/ComingSoonOverlay';
 
 export const metadata: Metadata = {
   title: 'SkinsOins | Luxury Botanical Skincare',
@@ -117,7 +116,6 @@ export default function RootLayout({
               </footer>
             </div>
             <CartDrawer />
-            <ComingSoonOverlay />
           </div>
         </ShopProvider>
       </body>
