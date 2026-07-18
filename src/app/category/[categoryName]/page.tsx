@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CategoryClient from '../../../components/CategoryClient';
+import { PRODUCTS } from '../../../constants';
 
 interface Props {
   params: Promise<{
@@ -16,10 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// 1. We added this function to define which categories to build statically
+// Pre-render a page for each real product category.
 export async function generateStaticParams() {
-  // Replace these with your exact category names (use URL-friendly names)
-  const categories = ['cleansers', 'serums', 'moisturizers', 'masks', 'all'];
+  const categories = Array.from(new Set(PRODUCTS.map((product) => product.category)));
 
   return categories.map((name) => ({
     categoryName: name,
